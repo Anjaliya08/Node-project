@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>book Page</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+  .b1 {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.c2 {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.form-section, .map-section {
+  padding: 20px;
+}
+
+.form-section {
+  flex: 1;
+}
+
+.head1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form input:focus {
+  border-color: #ff9800;
+  outline: none;
+}
+
+form button {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #e68a00;
+}
+
+.map-section {
+  flex: 1;
+  position: relative;
+}
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+.map-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+</style>
+<body>
+    <%- include('./common/header1.ejs') %>
+<div class="container c2 b1">
+    <div class="form-section">
+      <h1 class="head1">Book A Table</h1>
+      <form action="/book" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="number" name="persons" placeholder="How many persons?" required>
+        <input type="date" name="date" required>
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+    <div class="map-section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508616!2d144.9537363153169!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727e0b065fdd6b!2sMelbourne%20Central!5e0!3m2!1sen!2sau!4v1622114346037!5m2!1sen!2sau"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        title="Google Map">
+      </iframe>
+      <p class="map-error">This page can't load Google Maps correctly.</p>
+    </div>
+  </div>
+  <%- include('./common/footer.ejs') %>
+</body>
+</html>

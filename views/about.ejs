@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+.about_section {
+  background:#ffbe33;
+  color: #ffffff;
+}
+
+.about_section .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about_section .img-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about_section .img-box img {
+  width: 100%;
+  max-width: 445px;
+  position: relative;
+  z-index: 2;
+}
+
+.about_section .detail-box p {
+  margin-top: 15px;
+}
+
+.about_section .detail-box a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #ffbe33;
+  color: #ffffff;
+  border-radius: 45px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 15px;
+}
+
+.about_section .detail-box a:hover {
+  background-color: #e69c00;
+}
+    </style>
+<body>
+    <%- include('./common/header1.ejs') %>
+    <section class="about_section layout_padding">
+        <div class="container  ">
+    
+          <div class="row">
+            <div class="col-md-6 ">
+              <div class="img-box">
+                <img src="./images/about.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="detail-box">
+                <div class="heading_container">
+                  <h2>
+                    All About Tandoori Chaupal
+                  </h2>
+                </div>
+                <p>
+                    Tandoori Chaupal is a popular restaurant that offers an authentic Indian dining experience, specializing in tandoori and Mughlai cuisine. The restaurant is known for its warm, welcoming atmosphere, where guests can enjoy a blend of traditional flavors and contemporary dining.
+
+                    At Tandoori Chaupal, the menu features a wide variety of dishes, with an emphasis on smoky, grilled items cooked in the traditional tandoor oven. The restaurant serves a range of appetizers, such as succulent kebabs, and hearty mains like flavorful biryanis, curries, and naan breads, all prepared with the finest spices and freshest ingredients. Their tandoori specialties are a standout, with options like tandoori chicken, lamb chops, and paneer tikka.
+                    
+                    The ambiance at Tandoori Chaupal is designed to be both cozy and vibrant, making it ideal for casual dinners, family gatherings, or special celebrations. The restaurant aims to deliver an unforgettable dining experience with its excellent service, flavorful dishes, and a rich cultural setting that reflects the essence of Indian cuisine.
+                    
+                    Tandoori Chaupal is a perfect place for anyone looking to enjoy a delicious and authentic Indian meal in a comfortable, inviting setting. Whether you're craving a spicy, flavorful feast or just a quick bite of your favorite Indian dish, Tandoori Chaupal offers something for everyone.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <%- include('./common/footer.ejs') %>
+</body>
+</html>

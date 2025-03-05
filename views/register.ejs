@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .b1 {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .c2 {
+            display: flex;
+            gap: 20px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .form-section, .map-section {
+            padding: 20px;
+        }
+        .form-section {
+            flex: 1;
+        }
+        .head1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        form input, form button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form input:focus {
+            border-color: #ff9800;
+            outline: none;
+        }
+        form button {
+            background-color: #ff9800;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #e68a00;
+        }
+        form button:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <%- include('./common/header1.ejs') %>
+    <div class="container c2 b1">
+        <div class="form-section">
+            <h1 class="head1">REGISTER</h1>
+            <form id="loginForm" action="/register" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="number" placeholder="Phone Number" required>
+                <input type="email" name="mail" placeholder="Your Email" required>
+                <input type="text" name="address" placeholder="Your Address" required>
+                <input type="password" id="password" name="password" placeholder="Your Password" required>
+                
+                <button type="submit" id="submitButton">Submit</button>
+            </form>
+        </div>
+    </div>
+    <%- include('./common/footer.ejs') %>
+    <!-- <script>
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const submitButton = document.getElementById('submitButton');
+
+        function validatePasswords() {
+            if (password.value === confirmPassword.value && password.value !== '') {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        }
+
+        password.addEventListener('input', validatePasswords);
+        confirmPassword.addEventListener('input', validatePasswords);
+    </script> -->
+</body>
+</html>

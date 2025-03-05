@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .list-group-item {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            background-color: #ff6b6b !important;
+            transform: translateX(5px);
+            color: white !important;
+        }
+
+        .list-group-item:active {
+            background-color: #e63946 !important;
+        }
+
+        .list-group {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container bg-danger text-white mt-5 p-4 rounded">
+        
+        <div class="list-group">
+            <a href="/addproduct" class="list-group-item list-group-item-action bg-danger text-white border-0 rounded">Add Products</a>
+            <a href="/viewproduct" class="list-group-item list-group-item-action bg-danger text-white border-0 rounded">View Products</a>
+            <a href="/viewregister" class="list-group-item list-group-item-action bg-danger text-white border-0 rounded">View Registeration</a>
+            <a href="/viewbooking" class="list-group-item list-group-item-action bg-danger text-white border-0 rounded">View Booking</a>
+            <a href="/vieworder" class="list-group-item list-group-item-action bg-danger text-white border-0 rounded">View orders</a>
+            <a href="/category" class="list-group-item list-group-item-action bg-danger text-white border-0 rounded">add category</a>
+        </div>
+    </div>
+
+    <!-- Optionally include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-csIQvPFP30BnmaFB9hIBDW28wwOkbj3BSuwxjoYeFcrHnBKTc7f+E3w0LKxHg93z" crossorigin="anonymous"></script>
+</body>
+</html>
