@@ -82,7 +82,7 @@ router.get('/menu', async (req, res) => {
 router.get("/",async(req,res) =>{
     try{
         const productdata = await addproductSchema.find({});
-        res.render('home',{productdata: productdata});
+        res.render('index',{productdata: productdata});
         console.log(productdata);
     } catch (err){
         console.log(err);
